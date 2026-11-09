@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description"
+		content="Portafolio profesional de Edgar Lemuel Fuentes Solano, enfocado en geofísica, petrofísica, métodos inversos, programación científica y visualización de datos.">
+	<title>Edgar Lemuel Fuentes Solano | Portafolio Profesional</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Montserrat:wght@500;600;700;800&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js" defer></script>
+</head>
+
+<body class="portfolio-page">
+	<a class="skip-link" href="#contenido">Saltar al contenido</a>
+	<!-- HEADER / NAVEGACIÓN -->
+	<header class="site-header" id="site-header">
+		<div class="site-header__inner">
+			<a class="site-brand" href="#inicio" aria-label="Ir al inicio del portafolio">
+				Edgar Lemuel Fuentes Solano
+			</a>
+
+			<button class="site-nav__toggle" type="button" aria-expanded="false" aria-controls="site-nav-menu"
+				aria-label="Abrir menú de navegación">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+
+			<nav class="site-nav" id="site-nav-menu" aria-label="Navegación principal">
+				<ul class="site-nav__list">
+					<li class="site-nav__item"><a class="site-nav__link is-active" href="#inicio"
+							aria-current="page">Inicio</a></li>
+					<li class="site-nav__item"><a class="site-nav__link" href="#sobre-mi">Sobre mí</a></li>
+					<li class="site-nav__item"><a class="site-nav__link" href="#servicios">Especialización</a></li>
+					<li class="site-nav__item"><a class="site-nav__link" href="#proyectos">Proyectos</a></li>
+					<li class="site-nav__item"><a class="site-nav__link" href="#tecnologias">Tecnologías</a></li>
+					<li class="site-nav__item"><a class="site-nav__link" href="#experiencia">Experiencia</a></li>
+					<li class="site-nav__item"><a class="site-nav__link" href="#contacto">Contacto</a></li>
+				</ul>
+			</nav>
+
+			<a class="site-header__cta" href="#contacto">Trabajemos juntos</a>
+		</div>
+	</header>
+
+	<main class="site-main" id="contenido" tabindex="-1">
+		<!-- HERO PRINCIPAL -->
+		<section class="hero" id="inicio">
+			<div class="hero__content reveal">
+
+				<p class="hero__eyebrow">
+					Geofísica · Petrofísica · Ciencia de Datos
+				</p>
+
+				<h1 class="hero__title">
+					Geofísica aplicada, modelamiento y análisis de datos
+				</h1>
+
+
+				<p class="hero__subtitle">
+					Egresado de Geofísica del Instituto Politécnico Nacional,
+					con enfoque en análisis de datos científicos, interpretación
+					petrofísica, métodos inversos y programación en Python y MATLAB.
+
+					Desarrollo herramientas computacionales para procesar,
+					visualizar y analizar información geofísica y geológica.
+				</p>
+
+
+				<div class="hero__actions">
+					<a class="hero__button hero__button--primary" href="#proyectos">Ver proyectos</a>
+					<a class="hero__button hero__button--secondary" href="#servicios">Ver especialización</a>
+					<a class="hero__button hero__button--tertiary" href="#contacto">Contactarme</a>
+				</div>
+                <div class="hero__social"><a class="hero__social-link" href="https://github.com/CrastarK" target="_blank" rel="noopener noreferrer">GitHub · CrastarK</a><a class="hero__social-link" href="https://www.linkedin.com/in/lemuel-fuentes-0aa321261/" target="_blank" rel="noopener noreferrer">LinkedIn</a></div>
+			</div>
+
+			<div class="hero__visual reveal" aria-hidden="true">
+				<div class="hero__visual-glow"></div>
+				<svg class="hero__svg" viewBox="0 0 560 520" role="img"
+					aria-label="Visualización abstracta de datos científicos y geofísicos">
+					<defs>
+						<linearGradient id="planetGradient" x1="0%" x2="100%" y1="0%" y2="100%">
+							<stop offset="0%" stop-color="#ffae72" />
+							<stop offset="35%" stop-color="#ff8b47" />
+							<stop offset="100%" stop-color="#17324d" />
+						</linearGradient>
+						<linearGradient id="lineGradient" x1="0%" x2="100%" y1="0%" y2="0%">
+							<stop offset="0%" stop-color="#6ee7ff" stop-opacity="0.2" />
+							<stop offset="50%" stop-color="#6ee7ff" stop-opacity="1" />
+							<stop offset="100%" stop-color="#ff8b47" stop-opacity="0.55" />
+						</linearGradient>
+					</defs>
+					<circle cx="210" cy="250" r="135" fill="rgba(18,36,58,0.7)" stroke="rgba(110,231,255,0.75)"
+						stroke-width="1.2" />
+					<circle cx="210" cy="250" r="100" fill="url(#planetGradient)" opacity="0.9" />
+					<circle cx="210" cy="250" r="160" fill="none" stroke="rgba(110,231,255,0.3)"
+						stroke-dasharray="6 10" />
+					<circle cx="210" cy="250" r="188" fill="none" stroke="rgba(110,231,255,0.18)"
+						stroke-dasharray="2 14" />
+					<ellipse cx="210" cy="250" rx="140" ry="60" fill="none" stroke="rgba(255,139,71,0.5)"
+						stroke-width="1.2" transform="rotate(-12 210 250)" />
+					<ellipse cx="210" cy="250" rx="140" ry="60" fill="none" stroke="rgba(110,231,255,0.28)"
+						stroke-width="1.1" transform="rotate(22 210 250)" />
+					<path d="M90 345 C170 295, 240 315, 320 270 S440 190, 500 218" fill="none"
+						stroke="url(#lineGradient)" stroke-width="2.6" stroke-linecap="round" />
+					<path d="M80 210 C130 240, 180 233, 240 180 S360 120, 470 145" fill="none"
+						stroke="rgba(110,231,255,0.45)" stroke-width="1.8" stroke-linecap="round" />
+					<path d="M130 380 L200 210 L260 228 L340 156 L430 170" fill="none" stroke="rgba(255,139,71,0.3)"
+						stroke-width="1.4" stroke-linecap="round" />
+					<g fill="#dff9ff">
+						<circle cx="135" cy="287" r="3" />
+						<circle cx="178" cy="220" r="3" />
+						<circle cx="235" cy="190" r="3" />
+						<circle cx="295" cy="216" r="3" />
+						<circle cx="346" cy="260" r="3" />
+						<circle cx="410" cy="234" r="3" />
+					</g>
+				</svg>
+				<div class="hero__orbit hero__orbit--one"></div>
+				<div class="hero__orbit hero__orbit--two"></div>
+				<div class="hero__signal hero__signal--one"></div>
+				<div class="hero__signal hero__signal--two"></div>
+			</div>
+		</section>
+
+		<!-- SOBRE MÍ -->
+		<section class="about section" id="sobre-mi">
+			<div class="section__header">
+				<p class="section__eyebrow">Perfil profesional</p>
+				<h2 class="section__title">Sobre mí</h2>
+			</div>
+
+			<article class="about__card">
+                <p>Soy egresado de Geofísica con interés en la relación entre procesos físicos, modelos y datos. Desarrollo herramientas computacionales para explorar problemas científicos y presentar sus resultados con claridad.</p>
+                <p>Cuido la trazabilidad de los cálculos: distingo los datos sintéticos de las observaciones y documento los supuestos, las pruebas y las limitaciones de cada modelo.</p>
+            </article>
+		</section>
+
+		<!-- SERVICIOS -->
+		<section class="services section" id="servicios">
+
+			<div class="section__header reveal">
+				<p class="section__eyebrow">Competencias técnicas</p>
+
+				<h2 class="section__title">
+					Áreas de especialización
+				</h2>
+
+				<p class="section__description">
+					Aplico herramientas computacionales y métodos
+					matemáticos al análisis de datos geofísicos,
+					interpretación petrofísica, modelamiento numérico
+					y desarrollo de soluciones científicas.
+				</p>
+			</div>
+
+
+			<div class="services__grid">
+				<article class="service-card reveal">
+                    <h3 class="service-card__title">Análisis y visualización científica</h3>
+                    <p class="service-card__text">Procesamiento y análisis de datos geofísicos y geológicos, con figuras claras y procedimientos reproducibles.</p>
+                    <ul class="service-card__list"><li>NumPy</li><li>Pandas</li><li>Matplotlib</li></ul>
+                    <a class="service-card__link" href="#proyectos">Explorar proyectos</a>
+                </article>
+
+
+
+				<article class="service-card reveal">
+                    <h3 class="service-card__title">Petrofísica y registros de pozo</h3>
+                    <p class="service-card__text">Modelamiento de respuestas de pozo y estimación de propiedades petrofísicas mediante relaciones matemáticas explícitas.</p>
+                    <ul class="service-card__list"><li>Registros de pozo</li><li>Porosidad</li><li>Saturación de agua</li></ul>
+                    <a class="service-card__link" href="#proyectos">Explorar proyectos</a>
+                </article>
+
+				<article class="service-card reveal">
+                    <h3 class="service-card__title">Métodos inversos y optimización</h3>
+                    <p class="service-card__text">Exploración de espacios de parámetros, ajuste de modelos y comparación del comportamiento de algoritmos numéricos.</p>
+                    <ul class="service-card__list"><li>Mínimos cuadrados</li><li>Recocido simulado</li><li>Algoritmos genéticos</li></ul>
+                    <a class="service-card__link" href="#proyectos">Explorar proyectos</a>
+                </article>
+
+
+
+				<article class="service-card reveal">
+                    <h3 class="service-card__title">Programación científica</h3>
+                    <p class="service-card__text">Desarrollo de scripts para automatizar cálculos, verificar resultados y organizar flujos de trabajo científicos.</p>
+                    <ul class="service-card__list"><li>Python</li><li>MATLAB</li><li>Reproducibilidad</li></ul>
+                    <a class="service-card__link" href="#proyectos">Explorar proyectos</a>
+                </article>
+
+			</div>
+		</section>
+
+		<!-- PROYECTOS -->
+		<section class="projects section" id="proyectos">
+			<div class="section__header reveal">
+				<p class="section__eyebrow">Portafolio</p>
+				<h2 class="section__title">Proyectos destacados</h2>
+				<p class="section__description">
+					Casos de estudio y herramientas desarrolladas para ciencia, geoespacialidad, datos y software
+					técnico.
+				</p>
+			</div>
+
+			<div class="projects__grid">
+				<article class="project-card reveal project-card--petrofisica">
+					<a class="project-card__media" href="Proyectos/Petrofisica_ELAN/index.html" aria-label="Ver el proyecto de modelamiento petrofísico mediante inversión lineal">
+						<picture>
+							<source type="image/webp" srcset="Proyectos/Petrofisica_ELAN/web/oscuro/01_composicion_volumetrica-640.webp 640w, Proyectos/Petrofisica_ELAN/web/oscuro/01_composicion_volumetrica-1280.webp 1280w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 420px">
+							<img class="project-card__image" src="Proyectos/Petrofisica_ELAN/Figuras/oscuro/01_composicion_volumetrica.png" width="3181" height="2114" loading="lazy" decoding="async" alt="Barras apiladas con las fracciones de calcita, dolomita, cuarzo y porosidad recuperadas en cuatro escenarios sintéticos.">
+						</picture>
+					</a>
+					<div class="project-card__body">
+						<h3 class="project-card__title">Modelamiento petrofísico mediante inversión lineal</h3>
+						<p class="project-card__text">Estimación de fracciones volumétricas mediante un modelo lineal simplificado de inspiración ELAN, con datos sintéticos.</p>
+						<ul class="project-card__tags">
+							<li>Python</li>
+							<li>NumPy</li>
+							<li>Matplotlib</li>
+							<li>Petrofísica</li>
+						</ul>
+						<div class="project-card__actions">
+							<a class="project-card__button" href="Proyectos/Petrofisica_ELAN/index.html">Ver proyecto</a>
+						</div>
+					</div>
+				</article>
+
+				<article class="project-card reveal project-card--pozo">
+                    <a class="project-card__media" href="Proyectos/Registros_Sinteticos_Pozo/index.html" aria-label="Ver el proyecto de simulación de registros geofísicos de pozo">
+                        <picture>
+                            <source type="image/webp" srcset="Proyectos/Registros_Sinteticos_Pozo/web/oscuro/01_registros_pozo-640.webp 640w, Proyectos/Registros_Sinteticos_Pozo/web/oscuro/01_registros_pozo-1280.webp 1280w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 420px">
+                            <img class="project-card__image" src="Proyectos/Registros_Sinteticos_Pozo/web/oscuro/01_registros_pozo-1280.webp" width="1280" height="796" loading="lazy" decoding="async" alt="Figura científica del pozo sintético: facies y siete curvas geofísicas alineadas entre 1000 y 1300 m de profundidad.">
+                        </picture>
+                    </a>
+                    <div class="project-card__body">
+                        <h3 class="project-card__title">Simulación y análisis de registros geofísicos de pozo</h3>
+                        <p class="project-card__text">Generación y análisis de registros geofísicos sintéticos mediante Python, con modelamiento de respuestas petrofísicas y visualización multicanal por profundidad.</p>
+                        <ul class="project-card__tags">
+                            <li>Python</li>
+                            <li>NumPy</li>
+                            <li>Pandas</li>
+                            <li>Matplotlib</li>
+                            <li>Petrofísica</li>
+                        </ul>
+                        <div class="project-card__actions">
+                            <a class="project-card__button" href="Proyectos/Registros_Sinteticos_Pozo/index.html">Ver proyecto</a>
+                        </div>
+                    </div>
+                </article>
+
+				<article class="project-card reveal project-card--inversos">
+                    <a class="project-card__media" href="Proyectos/Metodos_Inversos/index.html" aria-label="Ver el proyecto de métodos inversos y optimización numérica">
+                        <picture><source type="image/webp" srcset="Proyectos/Metodos_Inversos/web/oscuro/01_superficie_costo-640.webp 640w, Proyectos/Metodos_Inversos/web/oscuro/01_superficie_costo-1280.webp 1280w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 420px">
+                        <img class="project-card__image" src="Proyectos/Metodos_Inversos/web/oscuro/01_superficie_costo-1280.webp" width="1280" height="1131" loading="lazy" decoding="async" alt="Superficie científica 3D de la función de costo compartida, con la referencia del mejor nodo de una malla finita."></picture>
+                    </a>
+                    <div class="project-card__body">
+                        <h3 class="project-card__title">Métodos inversos y optimización numérica</h3>
+                        <p class="project-card__text">Implementación y comparación en Python de búsqueda local, recocido simulado y algoritmos genéticos binarios, con análisis de convergencia y superficies de costo.</p>
+                        <ul class="project-card__tags"><li>Python</li><li>NumPy</li><li>Matplotlib</li><li>MATLAB</li><li>Optimización</li></ul>
+                        <div class="project-card__actions"><a class="project-card__button" href="Proyectos/Metodos_Inversos/index.html">Ver proyecto</a></div>
+                    </div>
+                </article>
+			</div>
+		</section>
+
+		<!-- TECNOLOGÍAS -->
+		<section class="tech section" id="tecnologias">
+            <div class="section__header reveal"><p class="section__eyebrow">Herramientas de trabajo</p><h2 class="section__title">Tecnologías y herramientas</h2></div>
+            <div class="tech__grid"><article class="tech-group reveal"><h3 class="tech-group__title">Programación científica</h3><ul class="tech-group__list"><li>Python</li><li>MATLAB</li></ul></article><article class="tech-group reveal"><h3 class="tech-group__title">Análisis y visualización</h3><ul class="tech-group__list"><li>NumPy</li><li>Pandas</li><li>Matplotlib</li></ul></article><article class="tech-group reveal"><h3 class="tech-group__title">Herramientas de desarrollo</h3><ul class="tech-group__list"><li>Git</li><li>GitHub</li><li>VS Code</li></ul></article></div>
+        </section>
+
+		<!-- EXPERIENCIA -->
+		<section class="experience section" id="experiencia">
+			<div class="section__header reveal">
+				<p class="section__eyebrow">Enfoque profesional</p>
+				<h2 class="section__title">Experiencia</h2>
+			</div>
+
+			<article class="experience__card reveal">
+                <p>Mi experiencia académica y de desarrollo se centra en modelamiento petrofísico, simulación de registros de pozo y métodos de optimización. Utilizo Python y MATLAB para implementar cálculos, comprobar resultados y comunicar hallazgos mediante visualizaciones científicas.</p>
+            </article>
+		</section>
+
+		<!-- CÓMO TRABAJO -->
+		<section class="workflow section">
+			<div class="section__header reveal">
+				<p class="section__eyebrow">Proceso de trabajo</p>
+				<h2 class="section__title">Cómo trabajo</h2>
+				<p class="section__description">
+					Un flujo claro para entender el objetivo, organizar la información y entregar resultados sólidos y
+					documentados.
+				</p>
+			</div>
+
+			<ol class="workflow__list"><li class="workflow__item reveal"><h3 class="workflow__title">1. Definir el objetivo</h3><p class="workflow__text">Delimito el problema, los datos disponibles y los resultados que se necesitan.</p></li><li class="workflow__item reveal"><h3 class="workflow__title">2. Revisar la información</h3><p class="workflow__text">Compruebo formatos, unidades, supuestos y restricciones antes de calcular.</p></li><li class="workflow__item reveal"><h3 class="workflow__title">3. Implementar y verificar</h3><p class="workflow__text">Desarrollo el código y contrasto los resultados con referencias y pruebas.</p></li><li class="workflow__item reveal"><h3 class="workflow__title">4. Documentar y comunicar</h3><p class="workflow__text">Entrego resultados, figuras y pasos de reproducción con sus limitaciones.</p></li></ol>
+		</section>
+
+		<!-- LLAMADA A LA ACCIÓN -->
+		<section class="cta section" id="cta">
+			<div class="cta__content reveal">
+				<p class="section__eyebrow">¿Listo para iniciar?</p>
+				<h2 class="cta__title">¿Necesitas convertir datos en un análisis claro?</h2>
+				<p class="cta__text">Conoce cómo abordo el modelamiento, la comprobación de resultados y la visualización de información científica.</p>
+				<a class="cta__button" href="#proyectos">Ver proyectos documentados</a>
+			</div>
+		</section>
+
+		<!-- CONTACTO -->
+		<section class="contact section" id="contacto">
+            <div class="section__header reveal">
+                <p class="section__eyebrow">Código y proyectos</p>
+                <h2 class="section__title">Contacto</h2>
+                <p class="section__description">Consulta mis perfiles profesionales y el código de mis proyectos científicos.</p>
+            </div>
+            <div class="contact__grid">
+                <article class="contact-links contact-profile reveal" aria-label="Perfiles profesionales públicos">
+                    <div><h3 class="contact-links__title">Edgar Lemuel / Geophysics</h3><p>Modelamiento, análisis de datos y visualización científica con código documentado.</p></div>
+                    <div class="contact-profile__actions"><a class="hero__button hero__button--primary" href="https://github.com/CrastarK" target="_blank" rel="noopener noreferrer">GitHub · CrastarK <span aria-hidden="true">↗</span></a><a class="hero__button hero__button--secondary" href="https://www.linkedin.com/in/lemuel-fuentes-0aa321261/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a></div>
+                </article>
+            </div>
+        </section>
+	</main>
+
+	<!-- FOOTER -->
+	<footer class="site-footer">
+		<div class="site-footer__inner">
+			<p class="site-footer__copy">© Edgar Lemuel Fuentes Solano</p>
+			<p class="site-footer__text">Portafolio profesional</p>
+
+			<nav class="site-footer__nav" aria-label="Enlaces del pie de página">
+				<a class="site-footer__link" href="https://github.com/CrastarK" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a class="site-footer__link" href="https://www.linkedin.com/in/lemuel-fuentes-0aa321261/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a class="site-footer__link" href="#contacto">Contacto</a>
+			</nav>
+		</div>
+	</footer>
+</body>
+
+</html>

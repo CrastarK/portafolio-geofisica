@@ -1,0 +1,136 @@
+{
+  "pruebas": 19,
+  "fallos": 0,
+  "errores": 0,
+  "experimentos_reproducidos_en_memoria": 30,
+  "historiales_conservados": 34,
+  "resultados_previos_intactos": true,
+  "originales_sha256": {
+    "geneticos1.m": "017c529ee9af48e659dbb0c5e0d5c88dd3638f9af12c5fb6c61d82751816ef5f",
+    "modelo22.m": "2b613eb9dbb0ce047569a71cc6c7935d3a16336d262ba8200c64736c81292426",
+    "modelo25.m": "1255fcfefae117c25277cf00dfb80ada83e4563cefe538081d9290e78b845024",
+    "modelo27.m": "4cff35519cd1651edb4227fa3d0d18031f42b037f054dc55ec52c16e374a1807",
+    "recristalizacion_simulada.m": "2b912dc2410de111427145a58d27acd0fa8ed4c12057c3b8c1b48634fa7cfce3"
+  },
+  "semillas": [
+    7,
+    19,
+    42,
+    73,
+    101,
+    137,
+    211,
+    307,
+    401,
+    503
+  ],
+  "evaluaciones_por_metodo": 6000,
+  "figuras": {
+    "oscuro": {
+      "png_300_dpi": 5,
+      "svg_vectoriales_sin_raster": 5,
+      "textos_dentro_lienzo": true,
+      "sin_solapamientos_texto": true,
+      "contraste_min_texto": 6.209173377413886,
+      "contraste_min_curvas": 7.611859782287376
+    },
+    "claro": {
+      "png_300_dpi": 5,
+      "svg_vectoriales_sin_raster": 5,
+      "textos_dentro_lienzo": true,
+      "sin_solapamientos_texto": true,
+      "contraste_min_texto": 6.969169230416357,
+      "contraste_min_curvas": 5.397419038028827
+    }
+  },
+  "exportaciones": [
+    {
+      "ruta": "Figuras\\oscuro\\01_superficie_costo.png",
+      "sha256": "da0647bbcb3ad9f3d712a3dd5e54c3f3e9cb584a45ce8b0705fccdc96896feb9"
+    },
+    {
+      "ruta": "Figuras\\oscuro\\01_superficie_costo.svg",
+      "sha256": "32b04d6cf7bf76e05eb2bc1e620eb4e11ed761dcc42cb142d1a4da554b003150"
+    },
+    {
+      "ruta": "Figuras\\oscuro\\02_contornos_trayectorias.png",
+      "sha256": "d9ddc82d99db9e482499e0768ad00e78a2cd236b5569a6867b063312b1bd506e"
+    },
+    {
+      "ruta": "Figuras\\oscuro\\02_contornos_trayectorias.svg",
+      "sha256": "17fe7a3758d0591085420e45484c36fc31adc61b90989d8f4162a504e445925d"
+    },
+    {
+      "ruta": "Figuras\\oscuro\\03_convergencia.png",
+      "sha256": "11f7e285e1e3272bb1633291bbac36f8ec2d5ce8bf54e4f45cbc20f7d9b366c2"
+    },
+    {
+      "ruta": "Figuras\\oscuro\\03_convergencia.svg",
+      "sha256": "ba2ae532c5995e503ddf8eb0403e58a5d37dcef8557189a490ccacccf4544fc9"
+    },
+    {
+      "ruta": "Figuras\\oscuro\\04_comparacion_algoritmos.png",
+      "sha256": "2a8528b1c576dd5c304754908d286a7b97cf9733a9b4fbc99a855095f45bef60"
+    },
+    {
+      "ruta": "Figuras\\oscuro\\04_comparacion_algoritmos.svg",
+      "sha256": "854ecd9347753cdba87ebab9cd8a9b78929424ad62b97d759ba5a288db12fd2d"
+    },
+    {
+      "ruta": "Figuras\\oscuro\\05_inversion_polinomial.png",
+      "sha256": "db718cb520142be4b115d8f35d433ce30f15d7840af2301ee75f48dfa8c647fb"
+    },
+    {
+      "ruta": "Figuras\\oscuro\\05_inversion_polinomial.svg",
+      "sha256": "706ef9f78110ba5b442273c1991ab7ca135dd5c3fe2e6fd738edbc8964d10859"
+    },
+    {
+      "ruta": "Figuras\\claro\\01_superficie_costo.png",
+      "sha256": "af19d6f8952d88465a342ef924d33e7db3420d0affcadf5a3f9eda9960319fa9"
+    },
+    {
+      "ruta": "Figuras\\claro\\01_superficie_costo.svg",
+      "sha256": "7cb4f3094d0b7e9f18ffd4cc84dcae1a920080f01be3b99313d5029f3660112a"
+    },
+    {
+      "ruta": "Figuras\\claro\\02_contornos_trayectorias.png",
+      "sha256": "2e6d3215ffd62ae7e50511aeca1a3e9eff020b54bdefe5739c8b916f9042b93c"
+    },
+    {
+      "ruta": "Figuras\\claro\\02_contornos_trayectorias.svg",
+      "sha256": "1308a2895a5d0e6c34e4dd055d611def9f9c5e48396c79a37a8f4dc3de5d2bf0"
+    },
+    {
+      "ruta": "Figuras\\claro\\03_convergencia.png",
+      "sha256": "a190beeb8720a49301ba2dc4182623cd72bea8d11563d371eb4f521156223c07"
+    },
+    {
+      "ruta": "Figuras\\claro\\03_convergencia.svg",
+      "sha256": "90e2367fd0ff2d9ee66be6bd128327b3a7affaf09f0c5b479e31f33242c30877"
+    },
+    {
+      "ruta": "Figuras\\claro\\04_comparacion_algoritmos.png",
+      "sha256": "d4e61f8659ac08a1f12323120a6f5b01d311c7cd3f3041fa7395cee85ab38b19"
+    },
+    {
+      "ruta": "Figuras\\claro\\04_comparacion_algoritmos.svg",
+      "sha256": "06de39d704ffa6fb356ff416730e44646ceae51b50ae363bb15b648f55ee6246"
+    },
+    {
+      "ruta": "Figuras\\claro\\05_inversion_polinomial.png",
+      "sha256": "dbb67c598b66c3893b544614673bd197672db549b0ad7353e006ca96df5b92da"
+    },
+    {
+      "ruta": "Figuras\\claro\\05_inversion_polinomial.svg",
+      "sha256": "a65529aa7511b2f463a5c106d091bc3d8818d8a0eede7f8c4f07f0843312514a"
+    }
+  ],
+  "matlab_ejecutado": false,
+  "alcance": "Coherencia numérica en Python; no validación con observaciones reales.",
+  "entorno": {
+    "python": "3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)]",
+    "plataforma": "Windows-11-10.0.26300-SP0",
+    "numpy": "2.2.3",
+    "matplotlib": "3.10.1"
+  }
+}

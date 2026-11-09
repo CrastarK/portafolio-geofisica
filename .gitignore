@@ -1,0 +1,41 @@
+# Entornos, cachés y archivos locales
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.bak
+*~
+
+# Credenciales y material privado: nunca forman parte del portafolio
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+*.xlsx
+*.xls
+*.xlsm
+privado/
+privados/
+private/
+
+# Respaldo e informes de integración local
+/Proyectos/Petrofisica_ELAN/Figuras/archivo_previo.zip
+validacion_web.json
+/Proyectos/Metodos_Inversos/comprobacion_windows.json
+
+# Salidas alternativas; conservar resultados científicos oficiales
+resultados_reproduccion/
+Figuras_reproduccion/
+Figuras_interactivas/

@@ -1,0 +1,235 @@
+{
+  "modelo": "Modelo lineal petrofísico simplificado de inspiración ELAN; datos sintéticos, sin validación comercial ni con mediciones reales",
+  "autor": "Edgar Lemuel Fuentes Solano",
+  "bloque_calculo_literal_identico": true,
+  "resultados_iguales_exactamente_al_original": [
+    "A",
+    "registros",
+    "volumenes_metodo1",
+    "volumenes_metodo2",
+    "casos",
+    "diferencias"
+  ],
+  "composiciones_originales": [
+    [
+      0.7,
+      0.1,
+      0.05,
+      0.15
+    ],
+    [
+      0.1,
+      0.7,
+      0.05,
+      0.15
+    ],
+    [
+      0.1,
+      0.1,
+      0.65,
+      0.15
+    ],
+    [
+      0.35,
+      0.15,
+      0.1,
+      0.4
+    ]
+  ],
+  "registros_sinteticos": [
+    [
+      2.4665,
+      0.151,
+      225.5
+    ],
+    [
+      2.5625,
+      0.16299999999999998,
+      217.7
+    ],
+    [
+      2.4305000000000003,
+      0.13899999999999998,
+      239.89999999999998
+    ],
+    [
+      2.0439999999999996,
+      0.401,
+      342.04999999999995
+    ]
+  ],
+  "solucion_solve": [
+    [
+      0.7000000000000003,
+      0.09999999999999966,
+      0.05,
+      0.15
+    ],
+    [
+      0.09999999999999631,
+      0.700000000000002,
+      0.05000000000000164,
+      0.14999999999999997
+    ],
+    [
+      0.09999999999999298,
+      0.10000000000000411,
+      0.6500000000000027,
+      0.14999999999999997
+    ],
+    [
+      0.3500000000000133,
+      0.14999999999999342,
+      0.09999999999999346,
+      0.4
+    ]
+  ],
+  "solucion_inversa": [
+    [
+      0.6999999999999957,
+      0.09999999999999787,
+      0.04999999999999716,
+      0.15000000000000002
+    ],
+    [
+      0.10000000000000142,
+      0.6999999999999957,
+      0.04999999999999716,
+      0.14999999999999997
+    ],
+    [
+      0.10000000000000142,
+      0.09999999999999787,
+      0.6500000000000021,
+      0.14999999999999997
+    ],
+    [
+      0.3500000000000085,
+      0.14999999999999147,
+      0.09999999999999432,
+      0.4
+    ]
+  ],
+  "error_max_solve": 1.3322676295501878e-14,
+  "error_max_inversa": 8.548717289613705e-15,
+  "diferencia_max_metodos": 8.43769498715119e-15,
+  "archivos_finales": 16,
+  "temas": {
+    "oscuro": {
+      "figuras": 4,
+      "png_300_dpi": 4,
+      "svg_vectoriales_validos": 4,
+      "imagenes_raster_incrustadas_svg": 0,
+      "contraste_min_texto": 5.0693840623733974,
+      "contraste_min_series": 7.258940598639454,
+      "separacion_subtitulo_densidad_px_120dpi": 50.15999999999997,
+      "textos_dentro_lienzo": true
+    },
+    "claro": {
+      "figuras": 4,
+      "png_300_dpi": 4,
+      "svg_vectoriales_validos": 4,
+      "imagenes_raster_incrustadas_svg": 0,
+      "contraste_min_texto": 5.142426890141768,
+      "contraste_min_series": 5.236831146286288,
+      "separacion_subtitulo_densidad_px_120dpi": 50.15999999999997,
+      "textos_dentro_lienzo": true
+    }
+  },
+  "solapamientos_texto": [],
+  "distribucion_y_anotaciones_identicas_entre_temas": true,
+  "exportaciones_previas_intactas_durante_validacion": true,
+  "interactividad": "plt.show() conservado; validación con Agg, sin abrir ventanas",
+  "versiones": {
+    "numpy": "2.2.3",
+    "matplotlib": "3.10.1"
+  },
+  "respaldo_anterior": {
+    "archivo": "archivo_previo.zip",
+    "archivos_preservados": 9,
+    "contenido_verificado_byte_a_byte": true
+  },
+  "revision_visual": "Revisadas las variantes claras y oscuras; atribución personal, márgenes y decoración fuera de datos.",
+  "archivos": [
+    {
+      "ruta": "claro/01_composicion_volumetrica.png",
+      "bytes": 217411,
+      "sha256": "ed5eb60fb940fc364da758b2cbacd9b2eb7958a7dd033b1a38b0366df31f718c"
+    },
+    {
+      "ruta": "claro/01_composicion_volumetrica.svg",
+      "bytes": 23404,
+      "sha256": "613e1ce4c0d616151a3ba7705269f2efc9c6cc3629958f20fa08a0bce9c0b276"
+    },
+    {
+      "ruta": "claro/02_respuestas_sinteticas.png",
+      "bytes": 288107,
+      "sha256": "8371f224008c6984aab936717411953d48fb9676d1d07fa97b128a2e3dde45d4"
+    },
+    {
+      "ruta": "claro/02_respuestas_sinteticas.svg",
+      "bytes": 30232,
+      "sha256": "d12d0cccfde740b1851047b500e083f1e9773cabe1d071d3c4f5dcf74a5eb84f"
+    },
+    {
+      "ruta": "claro/03_mapa_fracciones.png",
+      "bytes": 217789,
+      "sha256": "99d553c1236d7c33f60add24521603ff1488f2d5b3e943c6c1617e2f432fa2b4"
+    },
+    {
+      "ruta": "claro/03_mapa_fracciones.svg",
+      "bytes": 71955,
+      "sha256": "740269c9fc50b640fa1429160851f5252a960ebf08cef695668b539ccca31fda"
+    },
+    {
+      "ruta": "claro/04_comparacion_numerica.png",
+      "bytes": 308000,
+      "sha256": "72795f694b90d9853028c8078267b7b952dcb1d00a585080f2e5907f450acf31"
+    },
+    {
+      "ruta": "claro/04_comparacion_numerica.svg",
+      "bytes": 76836,
+      "sha256": "68bbacbe256c151c3a92ae7eec4f045147271fd3ff29efb885d10bb9f65e8b09"
+    },
+    {
+      "ruta": "oscuro/01_composicion_volumetrica.png",
+      "bytes": 213274,
+      "sha256": "fb8c4945005c617036b223e2796e23556701aff16ca12fcfa38f438be44e8f63"
+    },
+    {
+      "ruta": "oscuro/01_composicion_volumetrica.svg",
+      "bytes": 23164,
+      "sha256": "2767c1dd6c1f98445c13997846af3af227dce118f476b60a8a23648c4655c21a"
+    },
+    {
+      "ruta": "oscuro/02_respuestas_sinteticas.png",
+      "bytes": 282636,
+      "sha256": "cf3cda4d5b20377aaa5e090b9de2672e51cc21f729a9716423b00b3cd4ec38d1"
+    },
+    {
+      "ruta": "oscuro/02_respuestas_sinteticas.svg",
+      "bytes": 30232,
+      "sha256": "776065d25591bbaed010c3ee3ffd0a8e6095ef50cb32ea16c39d0774cae92f75"
+    },
+    {
+      "ruta": "oscuro/03_mapa_fracciones.png",
+      "bytes": 213981,
+      "sha256": "9426f43f73fcef621e0bee0d8a5a6cf2d93afcc56ddb72c33b9ba8dd40134701"
+    },
+    {
+      "ruta": "oscuro/03_mapa_fracciones.svg",
+      "bytes": 71955,
+      "sha256": "0e68a9771c77cc317993c1435762f9c419ba74ea7c1db186c77f1866759a4e81"
+    },
+    {
+      "ruta": "oscuro/04_comparacion_numerica.png",
+      "bytes": 303134,
+      "sha256": "1570d79ce440cf6103b61365c3c60f14e8298b80e3011adfde592e2c22c2a491"
+    },
+    {
+      "ruta": "oscuro/04_comparacion_numerica.svg",
+      "bytes": 76986,
+      "sha256": "edcb5e9d699ec0761755e6f63e55e7234fe7c2172f5a4d3b400782b947d16276"
+    }
+  ]
+}

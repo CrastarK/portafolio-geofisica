@@ -1,0 +1,126 @@
+{
+  "ejecucion": "Python/NumPy exclusivamente; MATLAB y Octave no ejecutados.",
+  "originales_sha256": {
+    "geneticos1.m": "017c529ee9af48e659dbb0c5e0d5c88dd3638f9af12c5fb6c61d82751816ef5f",
+    "modelo22.m": "2b613eb9dbb0ce047569a71cc6c7935d3a16336d262ba8200c64736c81292426",
+    "modelo25.m": "1255fcfefae117c25277cf00dfb80ada83e4563cefe538081d9290e78b845024",
+    "modelo27.m": "4cff35519cd1651edb4227fa3d0d18031f42b037f054dc55ec52c16e374a1807",
+    "recristalizacion_simulada.m": "2b912dc2410de111427145a58d27acd0fa8ed4c12057c3b8c1b48634fa7cfce3"
+  },
+  "semillas": [
+    7,
+    19,
+    42,
+    73,
+    101,
+    137,
+    211,
+    307,
+    401,
+    503
+  ],
+  "presupuesto_por_algoritmo": 6000,
+  "comparacion": "Misma función E y malla 61x61; cada candidato evaluado cuenta, incluidos duplicados. Sin parada por costo.",
+  "referencia_malla_61": {
+    "modelo": [
+      -0.3999999999999999,
+      -1.0
+    ],
+    "costo": 1.6859520740173402,
+    "evaluaciones": 3721
+  },
+  "referencia_fina_301_no_comparable_como_error_del_AG": {
+    "modelo": [
+      -0.3999999999999999,
+      -0.98
+    ],
+    "costo": 1.6824200872034822,
+    "evaluaciones": 90601
+  },
+  "variante_recristalizacion_malla61": {
+    "modelo": [
+      1.5,
+      0.0
+    ],
+    "costo": -6.376513515366941,
+    "evaluaciones": 3721
+  },
+  "resultados": {
+    "local": {
+      "costo_mediano": 8.536123582899998,
+      "brecha_mediana": 6.850171508882658,
+      "aciertos_malla": 0
+    },
+    "recocido": {
+      "costo_mediano": 1.727963261714235,
+      "brecha_mediana": 0.042011187696894936,
+      "aciertos_malla": 5
+    },
+    "genetico": {
+      "costo_mediano": 1.6859520740173402,
+      "brecha_mediana": 0.0,
+      "aciertos_malla": 9
+    }
+  },
+  "reproducciones_python_no_MATLAB": {
+    "modelo22": {
+      "modelo": [
+        -2.638532473536779,
+        1.268475796103961
+      ],
+      "costo": 8.529618738619126,
+      "evaluaciones": 1001,
+      "parada": "itermax"
+    },
+    "modelo25": {
+      "modelo": [
+        -0.40674047906394584,
+        -0.9318010473841118
+      ],
+      "costo": 1.720469114889914,
+      "evaluaciones": 3361,
+      "parada": "tolerancia_actual"
+    }
+  },
+  "polinomio": {
+    "verdadero": [
+      500.0,
+      50.0,
+      5.0,
+      0.5
+    ],
+    "minimos_cuadrados": [
+      500.000000000002,
+      49.99999999999958,
+      4.9999999999999645,
+      0.5000000000000016
+    ],
+    "modelo_limites_originales": [
+      3.0,
+      3.0,
+      3.0,
+      1.1515577539804058
+    ],
+    "modelo_recocido_escalado": [
+      499.96616439630634,
+      50.0862215818106,
+      5.000696946854008,
+      0.49869772112863836
+    ],
+    "error_ls": 3.304505021630365e-11,
+    "error_original": 8193.484347201927,
+    "error_escalado": 2.9149365393296316,
+    "condicion": 575.5891814367909,
+    "condicion_escalada": 4.791740816190311,
+    "rango": 4,
+    "evaluaciones_escalado": 48001,
+    "escalado": "A_j=G_j/||G_j||, y=d/||d||, q_j=m_j||G_j||/||d||; q en [-2,2]. No usa m_true para proponer ni aceptar.",
+    "cota_inferior_error_caja_original": 497.0,
+    "nota": "La cota 497 usa únicamente x=0 y |m0|<=3; no es el mínimo de la caja."
+  },
+  "versiones": {
+    "python": "3.12.0",
+    "numpy": "2.2.3",
+    "matplotlib": "3.10.1"
+  }
+}

@@ -1,0 +1,86 @@
+/* Extensión local: colores y tipografías heredados del portafolio. */
+.inversos-page :focus-visible { outline: 3px solid var(--accent-strong); outline-offset: 5px; }
+.inversos-page [hidden] { display: none; }
+.inversos-skip { position: fixed; top: .75rem; left: 1rem; z-index: 1100; padding: .75rem 1rem; background: var(--bg-elevated); transform: translateY(-200%); }
+.inversos-skip:focus { transform: none; }
+.inversos-header .site-header__inner { padding-block: 1rem; }
+.inversos-back { color: var(--accent-strong); font-weight: 700; padding: .6rem 0; }
+.inversos-main, .inversos-footer { width: min(100% - 2.5rem, 1100px); margin-inline: auto; }
+.inversos-main { overflow-wrap: anywhere; }
+.inversos-intro { padding-block: clamp(3rem, 7vw, 6rem) 1rem; }
+.inversos-intro h1 { max-width: 21ch; margin: 1rem 0 1.5rem; font: 800 clamp(2rem, 4.7vw, 3.8rem)/1.12 'Montserrat', sans-serif; letter-spacing: -.035em; }
+.inversos-lead { max-width: 72ch; color: var(--text-secondary); font-size: clamp(1.1rem, 2vw, 1.3rem); }
+.inversos-intro .project-card__tags { margin-block: 1.75rem; }
+.inversos-note { border-left: 3px solid #b95868; background: var(--bg-secondary); padding: 1.1rem 1.4rem; margin: 1.75rem 0; color: var(--text-secondary); }
+.inversos-note strong { color: var(--text-primary); }
+.inversos-note h3 { margin-top: 0; }
+.inversos-note p:last-child { margin-bottom: 0; }
+.inversos-nav { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; padding-block: 1rem; border-bottom: 1px solid var(--border-color); }
+.inversos-nav a { padding: .5rem 0; color: var(--accent-strong); }
+.inversos-section { padding-block: clamp(2.5rem, 6vw, 4rem); border-bottom: 1px solid var(--border-color); scroll-margin-top: 8rem; }
+.inversos-section h2 { font: 700 clamp(1.65rem, 3vw, 2.3rem)/1.2 'Montserrat', sans-serif; letter-spacing: -.025em; margin: .8rem 0 1.4rem; }
+.inversos-section h3 { font: 700 1.13rem/1.4 'Montserrat', sans-serif; margin-top: 1.6rem; }
+.inversos-section p, .inversos-list { color: var(--text-secondary); }
+.inversos-section a:not(.hero__button), .inversos-footer a { color: var(--accent-strong); text-decoration: underline; text-underline-offset: .2em; }
+.inversos-page a:hover { text-decoration: underline; text-underline-offset: .2em; }
+.inversos-columns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.5rem; }
+.inversos-columns > * { min-width: 0; }
+.inversos-list { padding-left: 1.25rem; }
+.inversos-list li { margin-bottom: .65rem; }
+.inversos-page code { font: .9em/1.6 Consolas, 'DejaVu Sans Mono', monospace; color: var(--text-primary); }
+.inversos-equation, .inversos-command { background: #0a1421; border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 1.1rem; overflow-x: auto; }
+.inversos-equation pre { margin: 0; font-size: .88rem; }
+.inversos-table-wrap { overflow-x: auto; margin-block: 1.75rem; border: 1px solid var(--border-color); border-radius: var(--radius-sm); }
+.inversos-page table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; font-size: .96rem; }
+.inversos-page caption { text-align: left; padding: 1rem 1.2rem; color: var(--text-secondary); background: var(--bg-secondary); }
+.inversos-page th, .inversos-page td { padding: .85rem 1.2rem; border-top: 1px solid var(--border-color); text-align: right; }
+.inversos-page th:first-child { text-align: left; }
+.inversos-page thead { background: var(--bg-elevated); }
+.inversos-page tbody th { font-weight: 400; }
+.inversos-page tbody tr:nth-child(even) { background: rgba(18, 36, 58, .5); }
+.inversos-numbers { display: grid; gap: 1rem; padding: 1.2rem 1.4rem; background: var(--bg-secondary); border-radius: var(--radius-sm); }
+.inversos-numbers > div { display: flex; flex-wrap: wrap; justify-content: space-between; column-gap: 1.5rem; }
+.inversos-numbers dt { color: var(--text-secondary); }
+.inversos-numbers dd { margin: 0; font-variant-numeric: tabular-nums; }
+.inversos-theme { display: flex; flex-wrap: wrap; gap: .75rem 1.5rem; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); padding: .85rem 1.1rem 1rem; margin: 1.75rem 0 0; }
+.inversos-theme legend { padding-inline: .4rem; font-weight: 700; }
+.inversos-theme label { display: inline-flex; align-items: center; gap: .6rem; min-height: 44px; cursor: pointer; }
+.inversos-theme input { width: 1.15rem; height: 1.15rem; accent-color: var(--accent); flex-shrink: 0; }
+.inversos-status { font-size: .95rem; min-height: 1.6em; }
+.inversos-gallery { display: grid; gap: 2.5rem; margin-top: 2rem; }
+.inversos-figure { min-width: 0; margin: 0; overflow: hidden; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-secondary); }
+.inversos-figure-view { display: block; }
+.inversos-figure-view img { width: 100%; height: auto; }
+.inversos-figure-view:focus-visible { outline-offset: -5px; }
+.inversos-figure figcaption { padding: 1.2rem 1.5rem 1.5rem; }
+.inversos-figure h3 { margin: 0; }
+.inversos-figure p { max-width: 85ch; }
+.inversos-downloads { display: flex; flex-wrap: wrap; gap: .6rem 1.5rem; }
+.inversos-downloads a { padding-block: .45rem; }
+.inversos-resources { margin-block: 1.5rem; }
+.inversos-return { margin-top: 1rem; }
+.inversos-footer { padding-block: 2rem; color: var(--text-secondary); font-size: .9rem; }
+.inversos-footer p { margin-block: .3rem; }
+@media (max-width: 760px) {
+    .inversos-header .site-header__inner { justify-content: flex-start; gap: .2rem; }
+    .inversos-header .site-brand { justify-content: flex-start; font-size: .9rem; }
+    .inversos-header .inversos-back { font-size: .9rem; }
+    .inversos-columns { grid-template-columns: minmax(0, 1fr); gap: 0; }
+    .inversos-page th, .inversos-page td { padding: .7rem .8rem; }
+    .inversos-page table { min-width: 550px; }
+    .inversos-theme { flex-direction: column; gap: .15rem; }
+    .inversos-figure figcaption { padding: 1rem; }
+    .inversos-nav { gap: .3rem 1rem; }
+    .inversos-return { width: 100%; text-align: center; }
+}
+@media (prefers-reduced-motion: reduce) {
+    html:has(.inversos-page) { scroll-behavior: auto; }
+    .inversos-page *, .inversos-page *::before, .inversos-page *::after { animation: none; transition: none; }
+}
+
+.inversos-methods { display: grid; gap: 1.4rem; margin-block: 1.75rem; }
+.inversos-methods dt { color: var(--text-primary); font-weight: 700; margin-bottom: .4rem; }
+.inversos-methods dd { margin: 0; color: var(--text-secondary); }
+.inversos-details { margin-block: 1.5rem; padding: .4rem 1.1rem; border: 1px solid var(--border-color); border-radius: var(--radius-sm); }
+.inversos-details summary { cursor: pointer; padding-block: .8rem; color: var(--accent-strong); font-weight: 700; min-height: 44px; }
+.inversos-details > p { margin-top: .6rem; }

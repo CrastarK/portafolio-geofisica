@@ -1,0 +1,87 @@
+{
+  "autor": "Edgar Lemuel Fuentes Solano",
+  "origen": "Generación matemática propia; sin archivos de entrada ni datos privados.",
+  "naturaleza": "Datos íntegramente sintéticos, no mediciones ni interpretación de un pozo real.",
+  "semilla": 42,
+  "numpy": "2.2.3",
+  "muestras": 1201,
+  "paso_m": 0.25,
+  "unidades": {
+    "DEPTH": "m",
+    "GR": "API",
+    "SP": "mV",
+    "CALI": "in",
+    "RHOB": "g/cm3",
+    "NPHI": "fraccion",
+    "DT": "us/ft",
+    "RT": "ohm.m",
+    "VSH_TRUE": "fraccion",
+    "PHI_TRUE": "fraccion",
+    "SW_TRUE": "fraccion",
+    "LITH_CODE": "categoria impuesta"
+  },
+  "intervalos": [
+    {
+      "techo_m": 1000,
+      "base_m": 1060,
+      "codigo": 1,
+      "nombre": "Lutita",
+      "vsh_base": 0.78,
+      "phi_base": 0.1,
+      "sw_base": 1.0
+    },
+    {
+      "techo_m": 1060,
+      "base_m": 1115,
+      "codigo": 2,
+      "nombre": "Arena limpia",
+      "vsh_base": 0.04,
+      "phi_base": 0.16,
+      "sw_base": 1.0
+    },
+    {
+      "techo_m": 1115,
+      "base_m": 1170,
+      "codigo": 3,
+      "nombre": "Arena porosa",
+      "vsh_base": 0.08,
+      "phi_base": 0.28,
+      "sw_base": 1.0
+    },
+    {
+      "techo_m": 1170,
+      "base_m": 1210,
+      "codigo": 4,
+      "nombre": "Respuesta HC simulada",
+      "vsh_base": 0.02,
+      "phi_base": 0.24,
+      "sw_base": 0.25
+    },
+    {
+      "techo_m": 1210,
+      "base_m": 1260,
+      "codigo": 5,
+      "nombre": "Intervalo compacto",
+      "vsh_base": 0.06,
+      "phi_base": 0.065,
+      "sw_base": 1.0
+    },
+    {
+      "techo_m": 1260,
+      "base_m": 1300,
+      "codigo": 1,
+      "nombre": "Lutita",
+      "vsh_base": 0.7,
+      "phi_base": 0.12,
+      "sw_base": 1.0
+    }
+  ],
+  "convencion_intervalos": "[techo, base), salvo el último que incluye 1300 m; etiquetas abruptas y propiedades suavizadas.",
+  "referencias_impuestas": [
+    "VSH_TRUE",
+    "PHI_TRUE",
+    "SW_TRUE",
+    "LITH_CODE"
+  ],
+  "modelo": "Relaciones idealizadas y ruido correlacionado; no simulación de una herramienta comercial."
+}

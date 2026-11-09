@@ -1,0 +1,145 @@
+{
+  "alcance": "Coherencia interna y exportación de una simulación propia; no validación con datos reales.",
+  "semilla": 42,
+  "muestras": 1201,
+  "columnas": [
+    "DEPTH",
+    "GR",
+    "SP",
+    "CALI",
+    "RHOB",
+    "NPHI",
+    "DT",
+    "RT",
+    "VSH_TRUE",
+    "PHI_TRUE",
+    "SW_TRUE",
+    "LITH_CODE"
+  ],
+  "sin_nulos": true,
+  "profundidad_regular": true,
+  "generacion_reproducible": true,
+  "tolerancia_csv": 5.01e-07,
+  "variacion_con_otra_semilla": true,
+  "respuestas_relativas_impuestas_comprobadas": true,
+  "medianas_por_codigo": {
+    "1": {
+      "GR": 118.208137,
+      "CALI": 9.264904,
+      "RHOB": 2.524042,
+      "NPHI": 0.29642,
+      "DT": 83.044497,
+      "RT": 2.419014,
+      "PHI_TRUE": 0.106935
+    },
+    "2": {
+      "GR": 25.7933235,
+      "CALI": 8.541342,
+      "RHOB": 2.398446,
+      "NPHI": 0.1690505,
+      "DT": 77.4239575,
+      "RT": 3.0985745,
+      "PHI_TRUE": 0.1596565
+    },
+    "3": {
+      "GR": 29.367736,
+      "CALI": 8.5765845,
+      "RHOB": 2.202184,
+      "NPHI": 0.29742599999999997,
+      "DT": 94.0235335,
+      "RT": 1.0451565,
+      "PHI_TRUE": 0.2810385
+    },
+    "4": {
+      "GR": 23.127367,
+      "CALI": 8.533589500000001,
+      "RHOB": 2.1229775,
+      "NPHI": 0.109667,
+      "DT": 109.38721100000001,
+      "RT": 17.8782225,
+      "PHI_TRUE": 0.240001
+    },
+    "5": {
+      "GR": 27.930509,
+      "CALI": 8.56089,
+      "RHOB": 2.5488099999999996,
+      "NPHI": 0.0826175,
+      "DT": 65.462946,
+      "RT": 11.773272,
+      "PHI_TRUE": 0.065618
+    }
+  },
+  "rangos_generados": {
+    "DEPTH": [
+      1000.0,
+      1300.0
+    ],
+    "GR": [
+      15.201593,
+      130.339232
+    ],
+    "SP": [
+      -64.425784,
+      -0.92833
+    ],
+    "CALI": [
+      8.356069,
+      10.050305
+    ],
+    "RHOB": [
+      2.082288,
+      2.597505
+    ],
+    "NPHI": [
+      0.061188,
+      0.323445
+    ],
+    "DT": [
+      62.52003,
+      112.946494
+    ],
+    "RT": [
+      0.854089,
+      29.398964
+    ],
+    "VSH_TRUE": [
+      0.005,
+      0.818917
+    ],
+    "PHI_TRUE": [
+      0.041955,
+      0.302876
+    ],
+    "SW_TRUE": [
+      0.21146,
+      1.0
+    ],
+    "LITH_CODE": [
+      1.0,
+      5.0
+    ]
+  },
+  "sha256_csv": "397ca202c08ff8a55fc9aedbde3c3e141a6d0d5b9d0dc2268ef652061742f0c7",
+  "figuras": {
+    "oscuro": {
+      "archivos": 4,
+      "png_300_dpi": 2,
+      "svg_sin_raster": 2,
+      "contraste_min_texto": 6.209173377413886,
+      "sin_recortes_de_curvas": true,
+      "sin_textos_cortados_o_superpuestos": true
+    },
+    "claro": {
+      "archivos": 4,
+      "png_300_dpi": 2,
+      "svg_sin_raster": 2,
+      "contraste_min_texto": 6.969169230416357,
+      "sin_recortes_de_curvas": true,
+      "sin_textos_cortados_o_superpuestos": true
+    }
+  },
+  "versiones": {
+    "numpy": "2.2.3",
+    "matplotlib": "3.10.1"
+  }
+}

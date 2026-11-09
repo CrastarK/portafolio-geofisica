@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Simulación propia de registros geofísicos sintéticos de pozo por Edgar Lemuel Fuentes Solano: generación reproducible en Python y visualización multicanal por profundidad.">
+    <title>Registros geofísicos sintéticos de pozo | Edgar Lemuel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&amp;family=Montserrat:wght@500;600;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="project.css">
+    <script src="project.js" defer></script>
+</head>
+<body class="pozo-page">
+    <a class="pozo-skip" href="#contenido">Saltar al contenido</a>
+    <header class="site-header pozo-header">
+        <div class="site-header__inner">
+            <a class="site-brand" href="../../index.html">Edgar Lemuel Fuentes Solano</a>
+            <a class="pozo-back" href="../../index.html#proyectos"><span aria-hidden="true">← </span>Volver al portafolio</a>
+        </div>
+    </header>
+    <main id="contenido" class="pozo-main" tabindex="-1">
+        <section class="pozo-intro" aria-labelledby="titulo-proyecto">
+            <p class="section__eyebrow">Geofísica computacional / Caso de estudio 02</p>
+            <h1 id="titulo-proyecto">Simulación y análisis de registros geofísicos de pozo</h1>
+            <p class="pozo-lead">Generación y análisis de registros geofísicos sintéticos mediante Python, con modelamiento de respuestas petrofísicas y visualización multicanal por profundidad.</p>
+            <ul class="project-card__tags" aria-label="Herramientas, compatibilidad y disciplina">
+                <li>Python</li><li>NumPy</li><li title="El CSV puede explorarse con Pandas; los scripts no dependen de esta biblioteca.">Pandas</li><li>Matplotlib</li><li>Petrofísica</li>
+            </ul>
+            <p class="pozo-note"><strong>Datos 100 % sintéticos.</strong> El pozo y sus intervalos fueron diseñados matemáticamente. La respuesta tipo hidrocarburo es un escenario impuesto; no representa un descubrimiento ni mediciones de campo.</p>
+            <nav class="pozo-nav" aria-label="Contenido del proyecto">
+                <a href="#metodologia">Objetivo y metodología</a>
+                <a href="#variables">Variables e intervalos</a>
+                <a href="#figuras">Galería científica</a>
+                <a href="#reproducir">Código y datos</a>
+            </nav>
+        </section>
+
+        <section class="pozo-section" id="metodologia" aria-labelledby="metodologia-titulo">
+            <p class="section__eyebrow">01 / Construcción del pozo</p>
+            <h2 id="metodologia-titulo">Una simulación propia y reproducible</h2>
+            <p>El objetivo es explorar respuestas cualitativamente plausibles de registros geofísicos y sus relaciones con propiedades petrofísicas impuestas. Las curvas comparten esas propiedades, transiciones suaves y variabilidad correlacionada en profundidad.</p>
+            <dl class="pozo-numbers">
+                <div><dt>Profundidad</dt><dd>1 000–1 300 m</dd></div>
+                <div><dt>Muestreo</dt><dd>0.25 m · 1 201 muestras</dd></div>
+                <div><dt>Diseño estratigráfico</dt><dd>Seis intervalos · cinco tipos de respuesta</dd></div>
+                <div><dt>Generación reproducible</dt><dd><code>np.random.default_rng(42)</code></dd></div>
+            </dl>
+            <div class="pozo-columns">
+                <div>
+                    <h3>Metodología de generación</h3>
+                    <ol class="pozo-list">
+                        <li>Definir una malla regular de profundidad y los valores base de arcillosidad, porosidad y saturación de agua por intervalo.</li>
+                        <li>Mezclar las propiedades en los contactos mediante transiciones de tangente hiperbólica, con escala de 0.65 m.</li>
+                        <li>Añadir heterogeneidad con ruido normal suavizado y mantener las propiedades dentro de los límites del generador.</li>
+                        <li>Calcular las respuestas idealizadas y exportar el CSV con seis decimales, junto con sus metadatos.</li>
+                    </ol>
+                </div>
+                <div>
+                    <h3>Procedencia comprobada</h3>
+                    <p>El generador no lee archivos de entrada. El CSV enlazado coincide byte a byte con la realización que produce la semilla 42. Los scripts no dependen de Excel ni utilizan datos privados o archivos de los proyectos anteriores.</p>
+                    <p>Los <a href="datos/metadatos.json">metadatos</a> registran autoría, semilla, unidades e intervalos. Las comprobaciones documentan coherencia interna de una simulación, no validación contra registros reales.</p>
+                </div>
+            </div>
+            <h3>Cómo se diseñan las respuestas</h3>
+            <ul class="pozo-list">
+                <li><strong>GR y SP.</strong> GR aumenta con el índice de arcillosidad. SP combina arcillosidad, porosidad y una línea base arbitraria.</li>
+                <li><strong>CALI.</strong> Parte de una barrena de 8.5 in y añade un efecto de arcillosidad, textura y ensanchamientos gaussianos centrados en 1028 y 1282 m.</li>
+                <li><strong>RHOB y NPHI.</strong> RHOB mezcla matriz y fluido. NPHI incorpora porosidad, una contribución arcillosa y un factor reducido para el componente no acuoso impuesto.</li>
+                <li><strong>DT.</strong> Usa un promedio temporal didáctico entre matriz y fluido; no resuelve propagación de ondas en un medio poroso.</li>
+                <li><strong>RT.</strong> Combina una relación tipo Archie con conducción arcillosa en paralelo y una perturbación multiplicativa. Una resistividad elevada también aparece en el intervalo compacto.</li>
+            </ul>
+            <p>Las ecuaciones y sus coeficientes completos están en el <a href="README.md">README</a> y en <a href="generar_datos.py" download>generar_datos.py</a>. Son elecciones de este ejercicio, sin calibración de una formación o herramienta comercial.</p>
+        </section>
+
+        <section class="pozo-section" id="variables" aria-labelledby="variables-titulo">
+            <p class="section__eyebrow">02 / Dataset sintético</p>
+            <h2 id="variables-titulo">Variables, unidades e intervalos</h2>
+            <p>El CSV contiene profundidad, siete curvas simuladas y cuatro referencias del generador. Ninguna columna representa una medición adquirida en campo.</p>
+            <div class="pozo-table-wrap" role="region" aria-label="Variables y unidades del CSV; desplazamiento horizontal disponible" tabindex="0">
+                <table>
+                    <caption>Curvas sintéticas y referencias impuestas</caption>
+                    <thead><tr><th scope="col">Variable</th><th scope="col">Unidad</th><th scope="col">Significado en el modelo</th></tr></thead>
+                    <tbody>
+                        <tr><th scope="row">DEPTH</th><td>m</td><td>Profundidad a lo largo de un pozo idealizado, sin trayectoria desviada.</td></tr>
+                        <tr><th scope="row">GR</th><td>API</td><td>Respuesta gamma asociada al índice de arcillosidad.</td></tr>
+                        <tr><th scope="row">SP</th><td>mV</td><td>Potencial espontáneo con referencia arbitraria.</td></tr>
+                        <tr><th scope="row">CALI</th><td>in</td><td>Diámetro de pozo simulado; barrena de 8.5 in.</td></tr>
+                        <tr><th scope="row">RHOB</th><td>g/cm³</td><td>Densidad volumétrica de una mezcla simplificada de matriz y fluido.</td></tr>
+                        <tr><th scope="row">NPHI</th><td>fracción</td><td>Respuesta neutrónica aparente, no porosidad efectiva medida.</td></tr>
+                        <tr><th scope="row">DT</th><td>µs/ft</td><td>Tiempo de tránsito compresional idealizado; no está en µs/m.</td></tr>
+                        <tr><th scope="row">RT</th><td>Ω·m</td><td>Resistividad sintética, no lectura de una herramienta LLD específica.</td></tr>
+                        <tr><th scope="row">VSH_TRUE</th><td>fracción</td><td>Índice impuesto de arcillosidad, usado como peso de mezcla en la matriz.</td></tr>
+                        <tr><th scope="row">PHI_TRUE</th><td>fracción</td><td>Porosidad impuesta.</td></tr>
+                        <tr><th scope="row">SW_TRUE</th><td>fracción</td><td>Saturación de agua impuesta en el espacio poroso.</td></tr>
+                        <tr><th scope="row">LITH_CODE</th><td>categoría</td><td>Etiqueta del intervalo, asignada por el simulador.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3>Seis intervalos, cinco tipos de respuesta</h3>
+            <div class="pozo-table-wrap" role="region" aria-label="Intervalos litológicos sintéticos y parámetros base; desplazamiento horizontal disponible" tabindex="0">
+                <table>
+                    <caption>Parámetros base del generador · no son las medias exactas del CSV</caption>
+                    <thead><tr><th scope="col">Profundidad (m)</th><th scope="col">Código</th><th scope="col">Escenario</th><th scope="col">VSH</th><th scope="col">PHI</th><th scope="col">SW</th></tr></thead>
+                    <tbody>
+                        <tr><th scope="row">1000–1060</th><td>1</td><td>Lutita</td><td>0.78</td><td>0.10</td><td>1.00</td></tr>
+                        <tr><th scope="row">1060–1115</th><td>2</td><td>Arena limpia</td><td>0.04</td><td>0.16</td><td>1.00</td></tr>
+                        <tr><th scope="row">1115–1170</th><td>3</td><td>Arena porosa</td><td>0.08</td><td>0.28</td><td>1.00</td></tr>
+                        <tr><th scope="row">1170–1210</th><td>4</td><td>Respuesta HC simulada</td><td>0.02</td><td>0.24</td><td>0.25</td></tr>
+                        <tr><th scope="row">1210–1260</th><td>5</td><td>Intervalo compacto</td><td>0.06</td><td>0.065</td><td>1.00</td></tr>
+                        <tr><th scope="row">1260–1300</th><td>1</td><td>Lutita</td><td>0.70</td><td>0.12</td><td>1.00</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>Los intervalos incluyen el techo y excluyen la base; el último incluye 1300 m. Las etiquetas cambian abruptamente y las propiedades se suavizan en los contactos, por lo que aparecen respuestas intermedias.</p>
+            <p>Las columnas <code>*_TRUE</code> y <code>LITH_CODE</code> son referencias de simulación, no resultados de una inversión ni registros independientes. Su uso como predictores de esas mismas propiedades introduciría información del generador.</p>
+        </section>
+
+        <section class="pozo-section" id="figuras" aria-labelledby="figuras-titulo">
+            <p class="section__eyebrow">03 / Visualización científica</p>
+            <h2 id="figuras-titulo">Del perfil multicanal a las relaciones petrofísicas</h2>
+            <p>Las vistas WebP conservan la composición completa de las figuras. Selecciona una imagen para ampliarla; los enlaces PNG y SVG abren los originales científicos, sin modificaciones.</p>
+            <fieldset class="pozo-theme" id="tema-figuras" hidden>
+                <legend>Tema de las figuras</legend>
+                <label><input type="radio" name="tema-figuras" value="oscuro" checked aria-controls="galeria-figuras"> Scientific Dark · Oscuro</label>
+                <label><input type="radio" name="tema-figuras" value="claro" aria-controls="galeria-figuras"> Scientific Light · Claro</label>
+            </fieldset>
+            <p class="pozo-status" id="estado-figuras" role="status" aria-live="polite">Figuras en tema oscuro. El contenido numérico es idéntico en ambos temas.</p>
+            <div class="pozo-gallery" id="galeria-figuras">
+                <figure class="pozo-figure" data-figure="01_registros_pozo">
+                    <a class="pozo-figure-view" data-format="png" href="Figuras/oscuro/01_registros_pozo.png" aria-label="Ampliar figura 01: registros sintéticos por profundidad">
+                        <img src="web/oscuro/01_registros_pozo-1280.webp" srcset="web/oscuro/01_registros_pozo-640.webp 640w, web/oscuro/01_registros_pozo-1280.webp 1280w, web/oscuro/01_registros_pozo-1920.webp 1920w" sizes="(max-width: 760px) calc(100vw - 40px), 1100px" width="1280" height="796" loading="lazy" decoding="async" alt="Pozo sintético de 1000 a 1300 m con columna de facies y pistas GR, SP, CALI, RHOB, NPHI, DT y RT. La respuesta HC impuesta ocupa 1170–1210 m; el intervalo compacto también presenta resistividad elevada.">
+                    </a>
+                    <figcaption><h3>01 / Registros por profundidad</h3><p>Siete curvas alineadas con profundidad creciente hacia abajo. NPHI aumenta hacia la izquierda, RT utiliza escala logarítmica y DT se expresa en µs/ft. CALI incluye la referencia de barrena de 8.5 in.</p><div class="pozo-downloads"><a data-format="png" href="Figuras/oscuro/01_registros_pozo.png">PNG original · Figura 01</a><a data-format="svg" href="Figuras/oscuro/01_registros_pozo.svg">SVG vectorial · Figura 01</a></div></figcaption>
+                </figure>
+                <figure class="pozo-figure" data-figure="02_relaciones_petrofisicas">
+                    <a class="pozo-figure-view" data-format="png" href="Figuras/oscuro/02_relaciones_petrofisicas.png" aria-label="Ampliar figura 02: relaciones petrofísicas sintéticas">
+                        <img src="web/oscuro/02_relaciones_petrofisicas-1280.webp" srcset="web/oscuro/02_relaciones_petrofisicas-640.webp 640w, web/oscuro/02_relaciones_petrofisicas-1280.webp 1280w, web/oscuro/02_relaciones_petrofisicas-1920.webp 1920w" sizes="(max-width: 760px) calc(100vw - 40px), 1100px" width="1280" height="661" loading="lazy" decoding="async" alt="Tres diagramas de dispersión sintéticos: densidad frente a neutrón, porosidad impuesta frente a resistividad y porosidad impuesta frente a tiempo de tránsito. Los colores representan facies asignadas por el generador.">
+                    </a>
+                    <figcaption><h3>02 / Relaciones petrofísicas</h3><p>Las 1 201 muestras aparecen en cada panel, coloreadas por facies impuesta. Las asociaciones proceden de las ecuaciones del generador; las variables de referencia no son estimaciones obtenidas de registros.</p><div class="pozo-downloads"><a data-format="png" href="Figuras/oscuro/02_relaciones_petrofisicas.png">PNG original · Figura 02</a><a data-format="svg" href="Figuras/oscuro/02_relaciones_petrofisicas.svg">SVG vectorial · Figura 02</a></div></figcaption>
+                </figure>
+            </div>
+            <noscript><p>Sin JavaScript se muestran las figuras oscuras. Acceso directo a las versiones claras:</p><ul class="pozo-list"><li><a href="Figuras/claro/01_registros_pozo.png">Figura 01 · Clara</a></li><li><a href="Figuras/claro/02_relaciones_petrofisicas.png">Figura 02 · Clara</a></li></ul></noscript>
+        </section>
+
+        <section class="pozo-section" id="limitaciones" aria-labelledby="limitaciones-titulo">
+            <p class="section__eyebrow">04 / Alcance de la interpretación</p>
+            <h2 id="limitaciones-titulo">Coherencia interna y limitaciones</h2>
+            <p>La <a href="validacion.json">comprobación científica existente</a> verifica reproducibilidad, profundidad regular, ausencia de nulos, respuestas relativas diseñadas y exportaciones. El <a href="validacion_web.json">informe de integración web</a> documenta rutas, navegación y conservación de los originales.</p>
+            <ul class="pozo-list">
+                <li>No existe un pozo real asociado, ubicación, campaña o herramienta de adquisición.</li>
+                <li>No se modelan invasión, salinidad variable, temperatura, anisotropía ni resolución radial.</li>
+                <li>La respuesta de lutita, la conducción arcillosa y el promedio sónico son aproximaciones sin calibración de campo.</li>
+                <li>La textura y el ruido fueron diseñados. No se demuestra que reproduzcan la distribución estadística de registros reales.</li>
+                <li>Las etiquetas son información del simulador. No se evalúa rendimiento de clasificación ni se estima incertidumbre.</li>
+            </ul>
+            <p class="pozo-note"><strong>Respuesta HC simulada.</strong> La saturación de agua reducida se impone en el generador. Una RT alta no identifica por sí sola hidrocarburos: el intervalo compacto ilustra esa ambigüedad.</p>
+        </section>
+
+        <section class="pozo-section" id="reproducir" aria-labelledby="reproducir-titulo">
+            <p class="section__eyebrow">05 / Reproducibilidad</p>
+            <h2 id="reproducir-titulo">Código, dataset y documentación</h2>
+            <p>El generador y las visualizaciones utilizan NumPy y Matplotlib. El CSV es compatible con Pandas para exploración adicional; los scripts actuales no dependen de esta biblioteca. La validación también utiliza Pillow, dependencia de Matplotlib.</p>
+            <pre class="pozo-command"><code>python Proyectos/Registros_Sinteticos_Pozo/generar_datos.py
+python Proyectos/Registros_Sinteticos_Pozo/visualizar_registros.py
+python Proyectos/Registros_Sinteticos_Pozo/validar_proyecto.py</code></pre>
+            <p>Las rutas se resuelven respecto a los scripts. La visualización conserva las ventanas interactivas; <code>--sin-mostrar</code> exporta sin abrirlas. El README explica los supuestos, las ecuaciones y las opciones de reproducción.</p>
+            <div class="pozo-downloads pozo-resources">
+                <a href="generar_datos.py" download>Generador Python</a>
+                <a href="visualizar_registros.py" download>Visualización Python</a>
+                <a href="validar_proyecto.py" download>Validación Python</a>
+                <a href="datos/pozo_sintetico.csv" download>Dataset sintético CSV</a>
+                <a href="datos/metadatos.json">Metadatos</a>
+                <a href="README.md">Leer README</a>
+            </div>
+            <a class="hero__button hero__button--primary pozo-return" href="../../index.html#proyectos">Regresar a proyectos destacados</a>
+        </section>
+    </main>
+    <footer class="pozo-footer"><p>Edgar Lemuel Fuentes Solano | Geofísica computacional</p><p>Registros de pozo 100 % sintéticos · Simulación propia reproducible</p></footer>
+</body>
+</html>

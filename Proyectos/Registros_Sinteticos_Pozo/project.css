@@ -1,0 +1,79 @@
+/* Extensión local: colores y tipografías heredados del portafolio. */
+.pozo-page :focus-visible { outline: 3px solid var(--accent-strong); outline-offset: 5px; }
+.pozo-page [hidden] { display: none; }
+.pozo-skip { position: fixed; top: .75rem; left: 1rem; z-index: 1100; padding: .75rem 1rem; background: var(--bg-elevated); transform: translateY(-200%); }
+.pozo-skip:focus { transform: none; }
+.pozo-header .site-header__inner { padding-block: 1rem; }
+.pozo-back { color: var(--accent-strong); font-weight: 700; padding: .6rem 0; }
+.pozo-main, .pozo-footer { width: min(100% - 2.5rem, 1100px); margin-inline: auto; }
+.pozo-main { overflow-wrap: anywhere; }
+.pozo-intro { padding-block: clamp(3rem, 7vw, 6rem) 1rem; }
+.pozo-intro h1 { max-width: 21ch; margin: 1rem 0 1.5rem; font: 800 clamp(2rem, 4.7vw, 3.8rem)/1.12 'Montserrat', sans-serif; letter-spacing: -.035em; }
+.pozo-lead { max-width: 72ch; color: var(--text-secondary); font-size: clamp(1.1rem, 2vw, 1.3rem); }
+.pozo-intro .project-card__tags { margin-block: 1.75rem; }
+.pozo-note { border-left: 3px solid #b95868; background: var(--bg-secondary); padding: 1.1rem 1.4rem; margin: 1.75rem 0; color: var(--text-secondary); }
+.pozo-note strong { color: var(--text-primary); }
+.pozo-note h3 { margin-top: 0; }
+.pozo-note p:last-child { margin-bottom: 0; }
+.pozo-nav { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; padding-block: 1rem; border-bottom: 1px solid var(--border-color); }
+.pozo-nav a { padding: .5rem 0; color: var(--accent-strong); }
+.pozo-section { padding-block: clamp(2.5rem, 6vw, 4rem); border-bottom: 1px solid var(--border-color); scroll-margin-top: 8rem; }
+.pozo-section h2 { font: 700 clamp(1.65rem, 3vw, 2.3rem)/1.2 'Montserrat', sans-serif; letter-spacing: -.025em; margin: .8rem 0 1.4rem; }
+.pozo-section h3 { font: 700 1.13rem/1.4 'Montserrat', sans-serif; margin-top: 1.6rem; }
+.pozo-section p, .pozo-list { color: var(--text-secondary); }
+.pozo-section a:not(.hero__button), .pozo-footer a { color: var(--accent-strong); text-decoration: underline; text-underline-offset: .2em; }
+.pozo-page a:hover { text-decoration: underline; text-underline-offset: .2em; }
+.pozo-columns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.5rem; }
+.pozo-columns > * { min-width: 0; }
+.pozo-list { padding-left: 1.25rem; }
+.pozo-list li { margin-bottom: .65rem; }
+.pozo-page code { font: .9em/1.6 Consolas, 'DejaVu Sans Mono', monospace; color: var(--text-primary); }
+.pozo-equation, .pozo-command { background: #0a1421; border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 1.1rem; overflow-x: auto; }
+.pozo-equation pre { margin: 0; font-size: .88rem; }
+.pozo-table-wrap { overflow-x: auto; margin-block: 1.75rem; border: 1px solid var(--border-color); border-radius: var(--radius-sm); }
+.pozo-page table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; font-size: .96rem; }
+.pozo-page caption { text-align: left; padding: 1rem 1.2rem; color: var(--text-secondary); background: var(--bg-secondary); }
+.pozo-page th, .pozo-page td { padding: .85rem 1.2rem; border-top: 1px solid var(--border-color); text-align: right; }
+.pozo-page th:first-child { text-align: left; }
+.pozo-page thead { background: var(--bg-elevated); }
+.pozo-page tbody th { font-weight: 400; }
+.pozo-page tbody tr:nth-child(even) { background: rgba(18, 36, 58, .5); }
+.pozo-numbers { display: grid; gap: 1rem; padding: 1.2rem 1.4rem; background: var(--bg-secondary); border-radius: var(--radius-sm); }
+.pozo-numbers > div { display: flex; flex-wrap: wrap; justify-content: space-between; column-gap: 1.5rem; }
+.pozo-numbers dt { color: var(--text-secondary); }
+.pozo-numbers dd { margin: 0; font-variant-numeric: tabular-nums; }
+.pozo-theme { display: flex; flex-wrap: wrap; gap: .75rem 1.5rem; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); padding: .85rem 1.1rem 1rem; margin: 1.75rem 0 0; }
+.pozo-theme legend { padding-inline: .4rem; font-weight: 700; }
+.pozo-theme label { display: inline-flex; align-items: center; gap: .6rem; min-height: 44px; cursor: pointer; }
+.pozo-theme input { width: 1.15rem; height: 1.15rem; accent-color: var(--accent); flex-shrink: 0; }
+.pozo-status { font-size: .95rem; min-height: 1.6em; }
+.pozo-gallery { display: grid; gap: 2.5rem; margin-top: 2rem; }
+.pozo-figure { min-width: 0; margin: 0; overflow: hidden; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-secondary); }
+.pozo-figure-view { display: block; }
+.pozo-figure-view img { width: 100%; height: auto; }
+.pozo-figure-view:focus-visible { outline-offset: -5px; }
+.pozo-figure figcaption { padding: 1.2rem 1.5rem 1.5rem; }
+.pozo-figure h3 { margin: 0; }
+.pozo-figure p { max-width: 85ch; }
+.pozo-downloads { display: flex; flex-wrap: wrap; gap: .6rem 1.5rem; }
+.pozo-downloads a { padding-block: .45rem; }
+.pozo-resources { margin-block: 1.5rem; }
+.pozo-return { margin-top: 1rem; }
+.pozo-footer { padding-block: 2rem; color: var(--text-secondary); font-size: .9rem; }
+.pozo-footer p { margin-block: .3rem; }
+@media (max-width: 760px) {
+    .pozo-header .site-header__inner { justify-content: flex-start; gap: .2rem; }
+    .pozo-header .site-brand { justify-content: flex-start; font-size: .9rem; }
+    .pozo-header .pozo-back { font-size: .9rem; }
+    .pozo-columns { grid-template-columns: minmax(0, 1fr); gap: 0; }
+    .pozo-page th, .pozo-page td { padding: .7rem .8rem; }
+    .pozo-page table { min-width: 550px; }
+    .pozo-theme { flex-direction: column; gap: .15rem; }
+    .pozo-figure figcaption { padding: 1rem; }
+    .pozo-nav { gap: .3rem 1rem; }
+    .pozo-return { width: 100%; text-align: center; }
+}
+@media (prefers-reduced-motion: reduce) {
+    html:has(.pozo-page) { scroll-behavior: auto; }
+    .pozo-page *, .pozo-page *::before, .pozo-page *::after { animation: none; transition: none; }
+}
