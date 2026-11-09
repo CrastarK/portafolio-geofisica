@@ -33,7 +33,7 @@
                 <a href="#modelo">Modelo y escenarios</a>
                 <a href="#resultados">Métodos y resultados</a>
                 <a href="#figuras">Galería científica</a>
-                <a href="#reproducir">Código y reproducción</a>
+                <a href="#reproducir">Explorar el proyecto</a>
             </nav>
         </section>
 
@@ -44,7 +44,7 @@
             <div class="elan-columns">
                 <div>
                     <h3>Formulación Ax = b</h3>
-                    <p><code>x = [Vcal, Vdol, Vcuarzo, phi]ᵀ</code> contiene las cuatro fracciones adimensionales. Para cada escenario se calcula <code>b = A @ x_real</code>.</p>
+                    <p><code>x = [Vcal, Vdol, Vcuarzo, phi]ᵀ</code> contiene las cuatro fracciones adimensionales. Para cada escenario se calcula <code>b = Ax</code>.</p>
                     <div class="elan-equation" role="region" aria-label="Matriz petrofísica A y vector de respuestas b" tabindex="0">
                         <pre><code>    [  2.71    2.87    2.65    1.00 ]
 A = [  0.00    0.02   -0.02    1.00 ]
@@ -90,7 +90,7 @@ b = [rho, phiN, dt, 1]ᵀ</code></pre>
             </div>
             <div class="elan-table-wrap" role="region" aria-label="Respuestas sintéticas; desplazamiento horizontal disponible" tabindex="0">
                 <table>
-                    <caption>Respuestas calculadas · valores redondeados para presentación, según el README</caption>
+                    <caption>Respuestas sintéticas calculadas · valores redondeados</caption>
                     <thead><tr><th scope="col">Escenario</th><th scope="col">Densidad (g/cm³)</th><th scope="col">Neutrón (fracción)</th><th scope="col">Tiempo de tránsito (µs/m)</th></tr></thead>
                     <tbody>
                         <tr><th scope="row">1</th><td>2.4665</td><td>0.151</td><td>225.50</td></tr>
@@ -100,7 +100,7 @@ b = [rho, phiN, dt, 1]ᵀ</code></pre>
                     </tbody>
                 </table>
             </div>
-            <h3>Resultados numéricos verificados</h3>
+            <h3>Precisión de las fracciones recuperadas</h3>
             <p>Ambos métodos recuperan las composiciones propuestas con diferencias de punto flotante. En la ejecución documentada con NumPy 2.2.3:</p>
             <dl class="elan-numbers">
                 <div><dt>Máximo error absoluto · solve</dt><dd><code>1.3322676295501878e-14</code></dd></div>
@@ -108,7 +108,7 @@ b = [rho, phiN, dt, 1]ᵀ</code></pre>
                 <div><dt>Máxima diferencia absoluta entre métodos</dt><dd><code>8.43769498715119e-15</code></dd></div>
             </dl>
             <p>Los errores se calculan frente a las fracciones propuestas. Todas estas magnitudes son diferencias de fracción volumétrica, no porcentajes. Los últimos dígitos pueden variar entre plataformas y bibliotecas numéricas; este ejemplo no permite concluir que un método sea superior.</p>
-            <p>La <a href="Figuras/validacion.json">comprobación de entrega</a> registra la conservación exacta de los resultados tras los cambios visuales. Comprueba consistencia numérica y presentación del ejercicio.</p>
+            <p>La recuperación de las cuatro composiciones muestra la consistencia del sistema lineal. Las diferencias entre métodos corresponden al redondeo de las operaciones en punto flotante, no a cambios interpretables en la composición.</p>
             <aside class="elan-note" aria-labelledby="limites-titulo">
                 <h3 id="limites-titulo">Limitaciones del modelo</h3>
                 <p>La recuperación comprueba la consistencia algebraica de datos generados con la misma matriz. No demuestra capacidad predictiva ni estima incertidumbre física. No se incorporan ruido de medición, calibración, variaciones de propiedades, efectos ambientales, otros minerales o restricciones de positividad en la inversión. No hay validación con datos reales ni validación comercial ELAN.</p>
@@ -163,17 +163,10 @@ b = [rho, phiN, dt, 1]ᵀ</code></pre>
         </section>
 
         <section class="elan-section" id="reproducir" aria-labelledby="reproducir-titulo">
-            <p class="section__eyebrow">04 / Reproducibilidad</p>
-            <h2 id="reproducir-titulo">Código y documentación</h2>
-            <p>El modelo utiliza Python, NumPy y Matplotlib. Desde la raíz del portafolio, en un entorno que contenga estas dependencias:</p>
-            <pre class="elan-command"><code>python Proyectos/Petrofisica_ELAN/Petrofisica_ELAN.py</code></pre>
-            <p>El programa imprime ambas soluciones, genera las cuatro figuras en los dos temas y conserva la visualización interactiva local. El README describe la formulación, los supuestos y las instrucciones completas.</p>
-            <div class="elan-downloads elan-resources">
-                <a href="Petrofisica_ELAN.py" download>Código Python</a>
-                <a href="helioforge_style.py" download>Módulo de estilos</a>
-                <a href="README.md">Leer README</a>
-                <a href="Figuras/validacion.json">Resultados de la comprobación</a>
-            </div>
+            <p class="section__eyebrow">04 / Recursos</p>
+            <h2 id="reproducir-titulo">Explorar el proyecto</h2>
+            <p>Consulta la implementación en Python y la documentación de la matriz de respuestas, los escenarios y los métodos de solución. Las instrucciones de reproducción están en la documentación técnica.</p>
+            <div class="elan-downloads elan-resources"><a href="Petrofisica_ELAN.py" download>Código Python</a><a href="README.md">Documentación técnica</a></div>
             <a class="hero__button hero__button--primary elan-return" href="../../index.html#proyectos">Regresar a proyectos destacados</a>
         </section>
     </main>

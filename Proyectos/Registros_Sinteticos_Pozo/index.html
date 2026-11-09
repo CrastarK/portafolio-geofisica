@@ -26,7 +26,7 @@
             <h1 id="titulo-proyecto">Simulación y análisis de registros geofísicos de pozo</h1>
             <p class="pozo-lead">Generación y análisis de registros geofísicos sintéticos mediante Python, con modelamiento de respuestas petrofísicas y visualización multicanal por profundidad.</p>
             <ul class="project-card__tags" aria-label="Herramientas, compatibilidad y disciplina">
-                <li>Python</li><li>NumPy</li><li title="El CSV puede explorarse con Pandas; los scripts no dependen de esta biblioteca.">Pandas</li><li>Matplotlib</li><li>Petrofísica</li>
+                <li>Python</li><li>NumPy</li><li title="Compatible con Pandas para explorar los datos tabulares.">Pandas</li><li>Matplotlib</li><li>Petrofísica</li>
             </ul>
             <p class="pozo-note"><strong>Datos 100 % sintéticos.</strong> El pozo y sus intervalos fueron diseñados matemáticamente. La respuesta tipo hidrocarburo es un escenario impuesto; no representa un descubrimiento ni mediciones de campo.</p>
             <nav class="pozo-nav" aria-label="Contenido del proyecto">
@@ -45,7 +45,7 @@
                 <div><dt>Profundidad</dt><dd>1 000–1 300 m</dd></div>
                 <div><dt>Muestreo</dt><dd>0.25 m · 1 201 muestras</dd></div>
                 <div><dt>Diseño estratigráfico</dt><dd>Seis intervalos · cinco tipos de respuesta</dd></div>
-                <div><dt>Generación reproducible</dt><dd><code>np.random.default_rng(42)</code></dd></div>
+                <div><dt>Generación reproducible</dt><dd>Semilla aleatoria 42</dd></div>
             </dl>
             <div class="pozo-columns">
                 <div>
@@ -54,13 +54,13 @@
                         <li>Definir una malla regular de profundidad y los valores base de arcillosidad, porosidad y saturación de agua por intervalo.</li>
                         <li>Mezclar las propiedades en los contactos mediante transiciones de tangente hiperbólica, con escala de 0.65 m.</li>
                         <li>Añadir heterogeneidad con ruido normal suavizado y mantener las propiedades dentro de los límites del generador.</li>
-                        <li>Calcular las respuestas idealizadas y exportar el CSV con seis decimales, junto con sus metadatos.</li>
+                        <li>Calcular las respuestas geofísicas idealizadas a partir de las propiedades compartidas y añadir perturbaciones específicas de cada curva.</li>
                     </ol>
                 </div>
                 <div>
-                    <h3>Procedencia comprobada</h3>
-                    <p>El generador no lee archivos de entrada. El CSV enlazado coincide byte a byte con la realización que produce la semilla 42. Los scripts no dependen de Excel ni utilizan datos privados o archivos de los proyectos anteriores.</p>
-                    <p>Los <a href="datos/metadatos.json">metadatos</a> registran autoría, semilla, unidades e intervalos. Las comprobaciones documentan coherencia interna de una simulación, no validación contra registros reales.</p>
+                    <h3>Propiedades que conectan las curvas</h3>
+                    <p>La arcillosidad, la porosidad y la saturación de agua controlan conjuntamente las respuestas. Esto permite comparar cómo una misma variación del medio se expresa en densidad, neutrón, tiempo de tránsito y resistividad.</p>
+                    <p>Las transiciones suaves representan contactos graduales y el ruido correlacionado introduce textura a distintas escalas de profundidad. Estas variaciones son parte del diseño sintético y no una estimación de la incertidumbre de campo.</p>
                 </div>
             </div>
             <h3>Cómo se diseñan las respuestas</h3>
@@ -71,7 +71,7 @@
                 <li><strong>DT.</strong> Usa un promedio temporal didáctico entre matriz y fluido; no resuelve propagación de ondas en un medio poroso.</li>
                 <li><strong>RT.</strong> Combina una relación tipo Archie con conducción arcillosa en paralelo y una perturbación multiplicativa. Una resistividad elevada también aparece en el intervalo compacto.</li>
             </ul>
-            <p>Las ecuaciones y sus coeficientes completos están en el <a href="README.md">README</a> y en <a href="generar_datos.py" download>generar_datos.py</a>. Son elecciones de este ejercicio, sin calibración de una formación o herramienta comercial.</p>
+            <p>Estas relaciones permiten estudiar tendencias y contrastes entre intervalos. Sus coeficientes son supuestos del modelo, sin calibración de una formación o herramienta comercial.</p>
         </section>
 
         <section class="pozo-section" id="variables" aria-labelledby="variables-titulo">
@@ -120,7 +120,7 @@
         <section class="pozo-section" id="figuras" aria-labelledby="figuras-titulo">
             <p class="section__eyebrow">03 / Visualización científica</p>
             <h2 id="figuras-titulo">Del perfil multicanal a las relaciones petrofísicas</h2>
-            <p>Las vistas WebP conservan la composición completa de las figuras. Selecciona una imagen para ampliarla; los enlaces PNG y SVG abren los originales científicos, sin modificaciones.</p>
+            <p>El perfil multicanal permite comparar las respuestas a una misma profundidad; los diagramas de dispersión muestran sus relaciones con las propiedades petrofísicas. Selecciona una figura para ampliarla o descargarla en PNG y SVG.</p>
             <fieldset class="pozo-theme" id="tema-figuras" hidden>
                 <legend>Tema de las figuras</legend>
                 <label><input type="radio" name="tema-figuras" value="oscuro" checked aria-controls="galeria-figuras"> Scientific Dark · Oscuro</label>
@@ -146,8 +146,8 @@
 
         <section class="pozo-section" id="limitaciones" aria-labelledby="limitaciones-titulo">
             <p class="section__eyebrow">04 / Alcance de la interpretación</p>
-            <h2 id="limitaciones-titulo">Coherencia interna y limitaciones</h2>
-            <p>La <a href="validacion.json">comprobación científica existente</a> verifica reproducibilidad, profundidad regular, ausencia de nulos, respuestas relativas diseñadas y exportaciones. El <a href="validacion_web.json">informe de integración web</a> documenta rutas, navegación y conservación de los originales.</p>
+            <h2 id="limitaciones-titulo">Interpretación conjunta y limitaciones</h2>
+            <p>El perfil permite reconocer los contrastes impuestos entre lutita, arenas y material compacto. La lectura conjunta es esencial: la resistividad depende tanto de la porosidad como de la saturación y la contribución arcillosa, por lo que una sola curva no determina de manera única el tipo de fluido.</p>
             <ul class="pozo-list">
                 <li>No existe un pozo real asociado, ubicación, campaña o herramienta de adquisición.</li>
                 <li>No se modelan invasión, salinidad variable, temperatura, anisotropía ni resolución radial.</li>
@@ -159,21 +159,10 @@
         </section>
 
         <section class="pozo-section" id="reproducir" aria-labelledby="reproducir-titulo">
-            <p class="section__eyebrow">05 / Reproducibilidad</p>
-            <h2 id="reproducir-titulo">Código, dataset y documentación</h2>
-            <p>El generador y las visualizaciones utilizan NumPy y Matplotlib. El CSV es compatible con Pandas para exploración adicional; los scripts actuales no dependen de esta biblioteca. La validación también utiliza Pillow, dependencia de Matplotlib.</p>
-            <pre class="pozo-command"><code>python Proyectos/Registros_Sinteticos_Pozo/generar_datos.py
-python Proyectos/Registros_Sinteticos_Pozo/visualizar_registros.py
-python Proyectos/Registros_Sinteticos_Pozo/validar_proyecto.py</code></pre>
-            <p>Las rutas se resuelven respecto a los scripts. La visualización conserva las ventanas interactivas; <code>--sin-mostrar</code> exporta sin abrirlas. El README explica los supuestos, las ecuaciones y las opciones de reproducción.</p>
-            <div class="pozo-downloads pozo-resources">
-                <a href="generar_datos.py" download>Generador Python</a>
-                <a href="visualizar_registros.py" download>Visualización Python</a>
-                <a href="validar_proyecto.py" download>Validación Python</a>
-                <a href="datos/pozo_sintetico.csv" download>Dataset sintético CSV</a>
-                <a href="datos/metadatos.json">Metadatos</a>
-                <a href="README.md">Leer README</a>
-            </div>
+            <p class="section__eyebrow">05 / Recursos</p>
+            <h2 id="reproducir-titulo">Explorar el proyecto</h2>
+            <p>El código permite estudiar la construcción del pozo y sus respuestas. La documentación técnica reúne las ecuaciones, los supuestos y las instrucciones de reproducción; el dataset permite explorar las curvas y las propiedades impuestas.</p>
+            <div class="pozo-downloads pozo-resources"><a href="generar_datos.py" download>Código Python · Generación</a><a href="visualizar_registros.py" download>Código Python · Visualización</a><a href="README.md">Documentación técnica</a><a href="datos/pozo_sintetico.csv" download>Datos sintéticos CSV</a></div>
             <a class="hero__button hero__button--primary pozo-return" href="../../index.html#proyectos">Regresar a proyectos destacados</a>
         </section>
     </main>
